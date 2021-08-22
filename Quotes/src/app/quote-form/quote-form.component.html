@@ -1,29 +1,40 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6">
-    <h4 class="text-center">Post a new Quote</h4>
-    <hr>
-    <form #quoteForm='ngForm'>
-     
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="text-center">Post a new Quote</h4>
+      <hr>
+      <form #quoteForm='ngForm'>
+
         <div class="form-group">
-  
-            <label for="name">Posted By</label>
-            <input type="text" required class="form-control" placeholder="Your Name" id="name" rows="6" [(ngModel)]="newQuote.description" >
-  
+
+          <label for="name">Posted By</label>
+          <input type="text" required class="form-control" placeholder="Your Name" id="author" rows="6"
+           [(ngModel)]="newQuote.author" name ="author" #author='ngModel' required>
+           <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+               <p>Author is Required</p>
+
+           </div>
+
+
         </div>
         <div class="form-group">
-  
-            <label for="description">Quote</label>
-            <textarea class="form-control" id="description" rows="4" required placeholder="Quote"></textarea>
-  
+
+          <label for="description">Quote</label>
+          <textarea class="form-control" id="description" rows="6" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
+          <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+            <p>Description is required</p>
+
+
+
+
         </div>
         <div class="form-group">
-            <label for="complete">Date posted</label>
-            <input type='date' id="complete" [(ngModel)]="newQuote">
-  
+          <label for="complete">Date posted</label>
+          <input type='date' id="complete" [(ngModel)]="newQuote">
+
         </div>
-    </form><br>
-    <button type="submit" class="btn btn-success"> Add Quote</button>
+      </form><br>
+      <button type="submit" class="btn btn-success"> Add Quote</button>
+    </div>
   </div>
-</div>
 </div>
