@@ -2,8 +2,9 @@
     <h1>Quotes</h1>
     <hr>
   
-    <div class="row">
-      <div class="col-md-6">
+    <div class="row gx-5">
+      <div class="col  " >
+
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
             <h6 id={{i}} appStrikethrough>{{quote.author}} due on {{quote.postedDate|date|uppercase}}</h6>
@@ -15,7 +16,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
     </div>
