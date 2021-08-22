@@ -1,19 +1,23 @@
 <div class="container">
     <h1>Quotes</h1>
     <hr>
-    
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card">
-                <div *ngFor='let quote of quotes; let i = index'>
-                    <li appStrikethrough> {{quote.author}} posted on {{quote.postedDate|date}}</li>
-                    <button (click)='toggleDetails(i)' class="btn btn-primary">Get Details</button>
-                    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'
-                        (isComplete)='completeQuote($event,i)'></app-quote-detail>
-                    </div>
-                    </div>
-            
+  
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor='let quote of quotes;let i = index'>
+          <div>
+            <h6 id={{i}} appStrikethrough>{{quote.author}} due on {{quote.postedDate|date|uppercase}}</h6>
+            <button (click)='toggleDetails(i)' class="btn btn-primary">Details</button>
+          </div>
+  
+          <div *ngIf='quote.showDescription'>
+            <app-quote-detail  [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+          </div>
         </div>
+      </div>
+      <div class="col-md-6">
+        <app-quote-form></app-quote-form>
+      </div>
+    </div>
     
-</div>
-
+  </div>
