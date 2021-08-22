@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Quote } from './quote';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quotes: string[];
-  
+  quotes: Quote[]=[
+    {id:1, author:'Rudyard'},
+    {id:2, author:'Maya'},
+    {id:3, author :'Rumi'},
+    {id:4, author:'Oprah'},
 
-  constructor(){
-    this.quotes =['if it is meant to be','think out loud','promises']
+  ];
+
+
   }
-}
+
