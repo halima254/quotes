@@ -14,10 +14,10 @@ export class QuoteComponent implements OnInit {
  }
 
   quotes: Quote[] = [
-    new Quote(1, 'Rumi', 'Be empty of worrying, think of who created thoughts'),
-    new Quote(2, 'Maya', 'let yourself be silently drawn by the strange pill of what you really love. It will not lead you astray'),
-    new Quote(3, 'Mandela', 'Dance until you shatter yourself'),
-    new Quote(4, 'Oprah', 'This is a stable truth, whatever you love you are'),
+    new Quote(1, 'Rumi', 'Be empty of worrying, think of who created thoughts', new Date(1994,3,5)),
+    new Quote(2, 'Maya', 'let yourself be silently drawn by the strange pill of what you really love. It will not lead you astray', new Date(2002,7,9)),
+    new Quote(3, 'Mandela', 'Dance until you shatter yourself', new Date(2001, 2,1)),
+    new Quote(4, 'Oprah', 'This is a stable truth, whatever you love you are',new Date(1998,9,8)),
 
   ];
   toggleDetails(index:any){
