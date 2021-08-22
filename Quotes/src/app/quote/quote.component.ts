@@ -20,6 +20,13 @@ export class QuoteComponent implements OnInit {
     new Quote(4, 'Oprah', 'This is a stable truth, whatever you love you are',new Date(1998,9,8)),
 
   ];
+
+  addNewQuote(quote:any){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.postedDate= new Date (quote.completeDate)
+    this.quotes.push(quote)
+  }
   toggleDetails(index:any){
     this.quotes[index].showDescription=!this.quotes[index].showDescription;
   }
