@@ -3,17 +3,12 @@
         <div class="col-md-6">
     <h4 class="text-center">Post a new Quote</h4>
     <hr>
-    <form>
-        <div class="form-group">
-  
-            <label for="name">Author</label>
-            <input type="text" required class="form-control" id="name" input  placeholder="Author's Name">
-  
-        </div>
+    <form #quoteForm='ngForm'>
+     
         <div class="form-group">
   
             <label for="name">Posted By</label>
-            <input type="text" required class="form-control" id="name" placeholder="Your Name" >
+            <input type="text" required class="form-control" placeholder="Your Name" id="name" rows="6" [(ngModel)]="newQuote.description" >
   
         </div>
         <div class="form-group">
@@ -24,10 +19,11 @@
         </div>
         <div class="form-group">
             <label for="complete">Date posted</label>
-            <input type='date' id="complete" required>
+            <input type='date' id="complete" [(ngModel)]="newQuote">
   
         </div>
-    </form>
+    </form><br>
+    <button type="submit" class="btn btn-success"> Add Quote</button>
   </div>
 </div>
 </div>
