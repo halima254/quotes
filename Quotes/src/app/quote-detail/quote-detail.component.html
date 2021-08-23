@@ -3,7 +3,7 @@
 </p>
 
 
-<button (click)='quoteComplete(true)' class= "btn btn-warning">Delete</button> <br>
+<button (click)='quoteComplete(true)' class= "btn btn-warning" id="delete">Delete</button> <br>
 <p>This quote was posted {{quote.postedDate|dateCount}} days ago</p>
 <button  (click)='upVote()' id ="up"> upVotes <span>{{upVotes}}</span></button>
 <button (click)='downVote()' id="down"> downVotes <span>{{downVotes}}</span></button>

@@ -23,7 +23,12 @@ export class QuoteDetailComponent implements OnInit {
   downVote(){
     this.downVotes=this.downVotes+1;
   }
-
+  // highVote(){
+  //   let highestVote = new Quote(0,"","", new Date());
+  //   for(let i = 0; 1<this.quote.length; i++){
+  
+  //   }
+  // }
   
 
   constructor() { }

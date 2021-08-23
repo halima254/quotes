@@ -30,6 +30,29 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index:any){
     this.quotes[index].showDescription=!this.quotes[index].showDescription;
   }
+  thumbsup(index:number){
+    this.quotes[index].likeQuote++;
+
+  }
+  thumbsdown(index:number){
+    this.quotes[index].dislikeQuote--;
+  }
+
+
+  highVote(){
+    let highestVote = new Quote(0,"","", new Date());
+    for(let i = 0; 1<this.quotes.length; i++){
+  if(this.quotes[i].likeQuote>highestVote.likeQuote){
+    highestVote = this.quotes[i];
+  }
+    }
+    if(highestVote.likeQuote > 0){
+      return highestVote;
+    }
+    else{
+      return;
+    }
+  }
 
   constructor() { }
 

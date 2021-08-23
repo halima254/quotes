@@ -1,10 +1,16 @@
 #up{
-    background-color: #0000;
+    background-color:salmon;
+    border-radius: 15%;
 }
 #down{
     margin-left: 10px;
+    border-radius: 15%;
 
 }
 button{
     padding: 5px;
+}
+#delete{
+    background-color: crimson;
+    color: white;
 }

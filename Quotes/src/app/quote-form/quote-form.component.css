@@ -1,4 +1,13 @@
 form{
     background-color: brown;
-    opacity: 0.5;
+    opacity: 0.8;
+    border-radius: 2%;
+}
+h4{
+    color: brown;
+    text-shadow: 2px, 1px white;
+}
+button{
+    background-color:white;
+    color: brown;
 }
