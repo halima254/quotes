@@ -5,6 +5,6 @@
 
 <button (click)='quoteComplete(true)' class= "btn btn-warning">Delete</button> <br>
 <p>This quote was posted {{quote.postedDate|dateCount}} days ago</p>
-<button (click)='upVote()'> upVotes <span>{{upVotes}}</span></button><br>
-<button (click)='downVote()'> downVotes <span>{{downVotes}}</span></button>
+<button  (click)='upVote()' id ="up"> upVotes <span>{{upVotes}}</span></button>
+<button (click)='downVote()' id="down"> downVotes <span>{{downVotes}}</span></button>
 
