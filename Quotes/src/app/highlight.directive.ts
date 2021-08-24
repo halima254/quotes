@@ -11,7 +11,7 @@ export class HighlightDirective {
  @Input("favQuote") favColor:string;
 
     constructor(private el: ElementRef) {
-      this.highlight(this.favColor || this.defaultColor || "yellow")
+      this.highlight(this.favColor || this.defaultColor || "white")
       
     }
     private highlight(color:string){

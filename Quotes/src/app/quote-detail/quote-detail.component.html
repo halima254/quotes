@@ -1,10 +1,10 @@
 <p>
     {{quote.description}}
 </p>
+<p>Author : {{quote.username}}</p>
 
-
-<button (click)='quoteComplete(true)' class= "btn btn-warning" id="delete">Delete</button> <br>
-<p>This quote was posted {{quote.postedDate|dateCount}} days ago</p>
-<button  (click)='upVote()' id ="up"> upVotes <span>{{upVotes}}</span></button>
-<button (click)='downVote()' id="down"> downVotes <span>{{downVotes}}</span></button>
+<button (click)='quoteComplete(true)' class= "btn btn-warning" id="delete"><i class="far fa-trash-alt"></i></button> <br>
+<p> {{quote.postedDate|dateAgo}}</p>
+<!-- <button  (click)='upVote()' id ="up"> upVotes <span>{{upVotes}}</span></button>
+<button (click)='downVote()' id="down"> downVotes <span>{{downVotes}}</span></button> -->
 

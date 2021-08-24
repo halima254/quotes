@@ -10,6 +10,7 @@ import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { HighlightDirective } from './highlight.directive';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 
 
@@ -21,7 +22,8 @@ import { HighlightDirective } from './highlight.directive';
     StrikethroughDirective,
     DateCountPipe,
     QuoteFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    DateAgoPipe
   ],
   imports: [
     BrowserModule,

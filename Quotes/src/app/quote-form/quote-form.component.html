@@ -30,14 +30,28 @@
 
 
         </div>
+
+
         <div class="form-group">
+
+          <label for="username">Author</label>
+          <input type="text"  class="form-control"  id="username" 
+           [(ngModel)]="newQuote.username" name ="username" #username='ngModel' required>
+           <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+               <p>Author is Required</p>
+
+           </div>
+
+
+        </div>
+        <!-- <div class="form-group">
           <label for="complete">Date posted</label>
           <input type='date' id="complete" [(ngModel)]="newQuote.postedDate" name="postedDate" #postedDate="ngModel" required>
           <div [hidden]="postedDate.valid || postedDate.pristine" class="alert alert-danger">
             <p>Date is required</p>
             </div>
 
-        </div>
+        </div> -->
       <br>
       <button type="submit" class="btn btn-primary"> Add Quote</button>
       </form>
